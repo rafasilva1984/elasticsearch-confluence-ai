@@ -1,0 +1,13 @@
+<html><body>
+<h2>Busca IA na documentação</h2>
+<form method="post">
+  <input type="text" name="query" placeholder="Digite sua busca" size="60">
+  <input type="submit" value="Buscar">
+</form>
+{% for hit in results %}
+<hr>
+<b>{{ hit._source.title }}</b><br>
+<a href="{{ hit._source.url }}" target="_blank">{{ hit._source.url }}</a><br>
+<p>{{ hit._source.content[:250] }}...</p>
+{% endfor %}
+</body></html>

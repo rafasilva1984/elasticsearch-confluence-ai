@@ -1,0 +1,16 @@
+{
+  "mappings": {
+    "properties": {
+      "title": {"type": "text"},
+      "space": {"type": "keyword"},
+      "url": {"type": "keyword"},
+      "content": {"type": "text"},
+      "vector": {
+        "type": "dense_vector",
+        "dims": 384,
+        "index": true,
+        "similarity": "cosine"
+      }
+    }
+  }
+}
